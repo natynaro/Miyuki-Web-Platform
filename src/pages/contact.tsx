@@ -39,7 +39,7 @@ export default function Contact() {
     {
       imageUrl: "/Images/backround/verdeazul.png",
       backround:"/Images/backround/verdeazul.png",
-      imageTitle: "Artesano 3",
+      imageTitle: "Artesano 4",
       imageDescription: "Descripción. Cargos. Datos curiosos",
     },
   ];
