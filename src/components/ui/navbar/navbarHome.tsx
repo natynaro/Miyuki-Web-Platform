@@ -14,7 +14,7 @@ import { mdiCartOutline, mdiAccountOutline } from "@mdi/js";
 import LoginLogoutButtom from "./buttons/loginLogout";
 import ProductsPopover, { Category } from "./ProductsPopover";
 import { useRouter } from "next/router.js";
-import Image from "next/image"; // Importa el componente de imagen de Next.js
+import Image from "next/image";
 
 export default function NavbarHome() {
   const router = useRouter();
@@ -68,28 +68,28 @@ export default function NavbarHome() {
     <NextUINavbar
       isBordered
       position="static"
-      height="7rem"
+      height="6rem"
       className="w-full mx-0 px-0"
     >
-      <div className="flex flex-row items-center w-full justify-between mx-0 px-4">
+      <div className="flex flex-row items-center w-full px-4 justify-between">
         {/* Logo container */}
-        <div className="flex items-center space-x-4">
+        <div className="flex-shrink-0">
           <Link href="/" color="primary">
             <Image
-              src="/Images/logo-letra.png" // Ruta de tu logo
+              src="/Images/logo-letra.png"
               alt="Logo"
-              width={100} // Ajusta el tamaño según tus necesidades
-              height={100} // Ajusta el tamaño según tus necesidades
+              width={100}
+              height={100}
             />
           </Link>
         </div>
 
         {/* Navigation links */}
-        <div className="hidden md:flex flex-grow justify-start space-x-4 ml-4">
+        <div className="hidden md:flex flex-grow justify-center space-x-2 md:space-x-16 ml-4">
           <ProductsPopover categories={categories} />
           {Object.entries(menuItemsRoutes).map(([item, href]) => (
             <NavbarItem key={href}>
-              <Link className="text-primary-50" href={href}>
+              <Link className="text-primary-50 hover:text-primary-200" href={href}>
                 {item}
               </Link>
             </NavbarItem>
@@ -97,7 +97,7 @@ export default function NavbarHome() {
         </div>
 
         {/* Action items */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 md:space-x-8">
           <LoginLogoutButtom />
           <Link href="/user/profile">
             <Icon path={mdiAccountOutline} size={1} />
@@ -106,14 +106,18 @@ export default function NavbarHome() {
             <Icon path={mdiCartOutline} size={1} />
           </Link>
           {/* Menu toggle for small screens */}
-          <NavbarMenuToggle className="md:hidden" />
+          <div className="cursor-pointer p-4 md:p-2">
+            <NavbarMenuToggle className="md:hidden w-3 h-3 flex items-center justify-center" />
+          </div>
+          
         </div>
       </div>
       <NavbarMenu>
-        <NavbarContent className="flex flex-col space-y-2">
+        <NavbarContent className="flex flex-col space-y-2 text-lg">
+          <ProductsPopover categories={categories} />
           {Object.entries(menuItemsRoutes).map(([item, href], index) => (
             <NavbarMenuItem key={index}>
-              <Link color="foreground" href={href} size="lg">
+              <Link href={href} className="hover:text-primary-200 text-lg text-secondary" size="lg">
                 {item}
               </Link>
             </NavbarMenuItem>

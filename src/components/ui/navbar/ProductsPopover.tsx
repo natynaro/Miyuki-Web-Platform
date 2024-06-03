@@ -24,17 +24,17 @@ const ProductsPopover: React.FC<ProductsPopoverProps> = ({ categories }) => {
   return (
     <Popover placement="bottom">
       <PopoverTrigger>
-        <Link className="text-primary-50">Productos</Link>
+        <Link className="sm:text-primary-50 text-secondary lg:text-primary-50 hover:text-primary-200 sm-text-lg text-l">Productos</Link>
       </PopoverTrigger>
       <PopoverContent>
-        <div className="w-[calc(100vw-50px)] flex flex-row justify-around bg-backround">
+        <div className="w-full max-w-md flex flex-col p-4 bg-background rounded-lg shadow-lg">
           {categories.map((category, index) => (
-            <div key={category.label} className="flex flex-col">
-              <h3>{category.label}</h3>
+            <div key={category.label} className="mb-4">
+              <h3 className="font-semibold">{category.label}</h3>
               {category.items.map((item) => (
-                <a key={item.href} href={item.href}>
+                <Link key={item.href} href={item.href} className="block mt-2 text-secondary hover:text-primary-200">
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           ))}
