@@ -14,7 +14,7 @@ export default function FeaturedSocialMedia() {
         <div className="flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-5 md:gap-10 p-4 w-full">
           <div className="flex flex-col justify-center items-center gap-8 md:gap-12">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center md:text-left">{socialMedia.title}</h1>
-            <p className="w-3/4 text-sm sm:text-base md:text-lg text-center md:text-left">{socialMedia.description}</p>
+            <p className="w-3/4 text-sm sm:text-base md:text-lg text-center md:text-center">{socialMedia.description}</p>
             <a href="https://www.instagram.com/mitos_de_colores/" target="_blank" rel="noopener noreferrer">
               <Button className="w-260px h-380px font-bold text-lg bg-primary text-focus text-center justify-center" color="success">
                 Instagram

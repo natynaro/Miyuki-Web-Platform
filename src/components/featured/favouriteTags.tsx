@@ -25,10 +25,10 @@ export default function FavouriteTags() {
 
   return (
     
-    <section className="p-4">
-      <h1 className="text-4xl font-bold text-center">Etiquetas favoritas</h1>
+    <section className="pt-16 pb-8">
+      <h1 className="text-4xl font-bold text-center mb-6 text-white">Etiquetas favoritas</h1>
       <div style={{ display: 'flex', justifyContent: 'space-around', width: 'full' }}>
-        <ThreeImageGallery imageInfoArray={accessories} textColor="text-black" />
+        <ThreeImageGallery imageInfoArray={accessories} textColor="text-white" />
       </div>
       
     </section>

@@ -69,7 +69,7 @@ export default function NavbarHome() {
       isBordered
       position="static"
       height="6rem"
-      className="w-full mx-0 px-0"
+      className="fixed top-0 w-full mx-0 px-0 bg-background"
     >
       <div className="flex flex-row items-center w-full px-4 justify-between">
         {/* Logo container */}
