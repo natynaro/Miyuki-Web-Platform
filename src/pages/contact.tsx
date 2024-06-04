@@ -47,13 +47,13 @@ export default function Contact() {
   return (
     <div>
       <NavbarHome />
-      <div className="w-full">
+      <div className="w-full pt-24">
         <div className="container mx-auto my-16 px-4 sm:px-6 lg:px-8">
           <section className="flex flex-col items-center space-y-16">
             <Card className="relative h-[60vh] w-full mb-8">
               <CardHeader className="absolute z-10 top-1/3 flex-col items-center">
-                <p className="text-4xl text-white uppercase font-bold mb-6">Acerca de &quot;KIWI&quot;</p>
-                <h4 className="text-black font-medium text-medium w-[80vh] text-center">
+                <p className=" text-white text-6xl uppercase font-bold mb-8">Acerca de &quot;KIWI&quot;</p>
+                <h4 className="text-black font-medium text-xl w-[80vh] text-center">
                 Nuestros dijes de miyuki no solo son accesorios, son pequeñas obras de arte diseñadas para llevar alegría y color a tu día a día.
                 </h4>
               </CardHeader>
@@ -68,13 +68,13 @@ export default function Contact() {
             <ThreeRectangleImageGallery imageInfoArray={characteristics} textColor="text-black" />
             <div className="w-screen flex justify-center py-24 bg-focus bg-opacity-75">
               <div className="w-full max-w-3xl bg-primary-50 p-6 rounded-md shadow-lg text-white relative z-10">
-                <p className="text-justify text-xl">
+                <p className="text-justify text-2xl">
                 En Kiwi, cada pieza de miyuki es más que un simple accesorio; es una expresión de arte y una celebración de individualidad. Nuestra tienda se especializa en dijes únicos, meticulosamente hechos a mano, que capturan la belleza y la diversidad del mundo que nos rodea. Desde la delicadeza de las flores hasta la juguetonía de los animales y la deliciosa apariencia de los alimentos, nuestros dijes son perfectos para quienes buscan añadir un toque especial y personal a su estilo.
                 </p>
               </div>
             </div>
-            <article className="mt-5 w-full">
-              <h1 className="text-2xl font-bold text-center mb-4">Conoce a nuestros artesanos</h1>
+            <article className="mt-8 w-full mb-32">
+              <h1 className="text-4xl font-bold text-center mb-8">Conoce a nuestros artesanos</h1>
               <ThreeImageGallery imageInfoArray={artisans} textColor="text-black" />
             </article>
           </section>

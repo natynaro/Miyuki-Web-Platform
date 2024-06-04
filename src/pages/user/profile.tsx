@@ -43,7 +43,7 @@ export default function Profile() {
   return (
     <div className="flex flex-col min-h-[100vh] justify-between">
       <NavbarHome />
-      <main>
+      <main className="mt-24">
         <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="col-span-1">
             <UserProfile />
