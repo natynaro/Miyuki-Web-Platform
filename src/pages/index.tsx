@@ -31,7 +31,7 @@ export default function Page() {
     <div className="flex flex-col w-full m-0 p-0">
       <NavbarHome />
 
-      <section className="flex flex-col items-center w-full">
+      <section className="flex flex-col items-center w-full mt-24">
         <div className="w-full mx-auto">
           <div className="mb-8 mt-8">
             <FeaturedProduct />
